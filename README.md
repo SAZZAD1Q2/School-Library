@@ -75,7 +75,7 @@ Run in your browser
 
 ### Prerequisites
 
-In order to run this project you need:
+To run this project you need:
 Git
 An IDE like vs code . bracket etc.
 Code Editor
