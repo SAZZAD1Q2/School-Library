@@ -23,33 +23,36 @@ def display_options
   puts '7 - Exit'
 end
 
+def handle_choice(app, choice)
+  actions = {
+    1 => -> { app.list_all_books },
+    2 => -> { app.list_all_people },
+    3 => -> { app.create_person },
+    4 => -> { app.create_book },
+    5 => -> { app.create_rental },
+    6 => -> { app.display_rentals_by_person_id },
+    7 => -> do
+      puts 'Thank you for using School Library App!'
+      exit
+    end
+  }
+
+  action = actions[choice]
+
+  if action.nil?
+    puts 'Invalid choice. Please try again.'
+  else
+    action.call
+  end
+end
+
 def main
   app = App.new
 
   loop do
     display_options
     choice = gets.chomp.to_i
-
-    case choice
-    when 1
-      app.list_all_books
-    when 2
-      app.list_all_people
-    when 3
-      app.create_person
-    when 4
-      app.create_book
-    when 5
-      app.create_rental
-    when 6
-      app.display_rentals_by_person_id
-    when 7
-      puts 'Thank you for using School Library App!'
-      exit
-    else
-      puts 'Invalid choice. Please try again.'
-    end
-
+    handle_choice(app, choice)
     puts "\n"
   end
 end
