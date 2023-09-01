@@ -8,7 +8,6 @@
 # puts student.name
 # puts teacher.name
 
-
 require './app'
 
 def display_options
