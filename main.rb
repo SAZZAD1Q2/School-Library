@@ -12,15 +12,15 @@
 require './app'
 
 def display_options
-  puts "Welcome to School Library App!"
-  puts "Please choose an option by entering a number:"
-  puts "1 - List all books"
-  puts "2 - List all people"
-  puts "3 - Create a person"
-  puts "4 - Create a book"
-  puts "5 - Create a rental"
-  puts "6 - List all rentals for a given person ID"
-  puts "7 - Exit"
+  puts 'Welcome to School Library App!'
+  puts 'Please choose an option by entering a number:'
+  puts '1 - List all books'
+  puts '2 - List all people'
+  puts '3 - Create a person'
+  puts '4 - Create a book'
+  puts '5 - Create a rental'
+  puts '6 - List all rentals for a given person ID'
+  puts '7 - Exit'
 end
 
 def main
@@ -44,10 +44,10 @@ def main
     when 6
       app.display_rentals_by_person_id
     when 7
-      puts "Thank you for using School Library App!"
+      puts 'Thank you for using School Library App!'
       exit
     else
-      puts "Invalid choice. Please try again."
+      puts 'Invalid choice. Please try again.'
     end
 
     puts "\n"
@@ -55,4 +55,3 @@ def main
 end
 
 main
-

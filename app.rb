@@ -68,7 +68,7 @@ class App
     name = gets.chomp
     print 'Has parent permission? [Y/N]: '
     has_permission = gets.chomp.downcase == 'y'
-    
+
     student = Student.new(age, name, has_permission)
     @people.push(student)
     puts 'Student created successfully'
@@ -81,7 +81,7 @@ class App
     name = gets.chomp
     print 'Specialization: '
     specialization = gets.chomp
-    
+
     teacher = Teacher.new(age, specialization, name)
     @people.push(teacher)
     puts 'Teacher created successfully'
@@ -92,7 +92,7 @@ class App
     title = gets.chomp
     print 'Author: '
     author = gets.chomp
-    
+
     book = Book.new(title, author)
     @books.push(book)
     puts 'Book created successfully'
