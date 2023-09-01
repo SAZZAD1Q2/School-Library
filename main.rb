@@ -31,7 +31,7 @@ def handle_choice(app, choice)
     4 => -> { app.create_book },
     5 => -> { app.create_rental },
     6 => -> { app.display_rentals_by_person_id },
-    7 => -> do
+    7 => lambda do
       puts 'Thank you for using School Library App!'
       exit
     end
