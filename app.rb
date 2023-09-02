@@ -16,24 +16,21 @@ class App
     loop do
       display_menu
       option = gets.chomp
-      case option
-      when '1'
-        display_books
-      when '2'
-        display_people
-      when '3'
-        create_person
-      when '4'
-        create_book
-      when '5'
-        create_rental
-      when '6'
-        display_rentals_by_person_id
-      when '7'
-        exit_app
-      else
-        puts 'Invalid option. Please select a valid option.'
-      end
+      handle_option(option)
+    end
+  end
+  
+  def handle_option(option)
+    case option
+    when '1' then display_books
+    when '2' then display_people
+    when '3' then create_person
+    when '4' then create_book
+    when '5' then create_rental
+    when '6' then display_rentals_by_person_id
+    when '7' then exit_app
+    else
+      puts 'Invalid option. Please select a valid option.'
     end
   end
 
